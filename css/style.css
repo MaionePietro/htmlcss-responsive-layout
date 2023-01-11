@@ -69,13 +69,17 @@ a {
 
 /* BUTTONS */
 
-.button {
-    color: black;
+.button{
+    color: white;
     border-radius: 30px;
 }
 
 .button--white {
     background-color: white;
+    color: black;
+}
+.button--blue {
+    background-color: var(--blue);
 }
 
 /* HEADER */
@@ -130,10 +134,17 @@ a {
 /* MEDIAUERY HERO */
 
 @media only screen and (max-width: 575px) { /*iphone*/
-    .hero [class^="col-"] {
+    .section_hero [class^="col-"] {
         flex-basis: calc(100%);
     }
 
+}
+
+
+/* SECTION HERO */
+.section_strategic .row{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
