@@ -15,9 +15,9 @@ img {
 :root {
     --blue: #0084FD;
     --lightblue: #B5DDFF;
-    --purple: #9792E4;
     --dark: #333333;
     --yellow: #FDC15F;
+    --violet: #8C87E0;
 }
 
 ul,
@@ -32,6 +32,13 @@ a {
     color: currentColor;
 }
 
+/* BACKGROUND COLOR */
+.section_strategic,
+.section_benefit,
+.section_start{
+    background-color: var(--violet);
+}
+
 /* CONTAINER */
 
 .container {
@@ -44,7 +51,6 @@ a {
 .row {
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .space-between {
@@ -54,21 +60,22 @@ a {
 /* COLUMN */
 
 .col-3 {
-    flex-basis: calc(100%/3);
+    flex-basis: calc(100%/3 - 60px);
 }
 
 .col-2 {
-    flex-basis: calc(100%*2/3);
+    flex-basis: calc(100%*2/3 - 90px);
 }
 
 /* BUTTONS */
 
 .button {
-
+    color: black;
+    border-radius: 30px;
 }
 
 .button--white {
-
+    background-color: white;
 }
 
 /* HEADER */
@@ -95,7 +102,7 @@ a {
 
 /* MEDIAUERY HEADER */
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 991px) { /*ipad*/
     .hamburger {
         display: block;
     }
@@ -115,9 +122,14 @@ a {
     min-height: 200px;
 }
 
+.section_hero .row{
+    gap: 30px;
+    justify-content: center;
+}
+
 /* MEDIAUERY HERO */
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 575px) { /*iphone*/
     .hero [class^="col-"] {
         flex-basis: calc(100%);
     }
